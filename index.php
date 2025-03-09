@@ -33,17 +33,23 @@ $result = mysqli_query($conn, $query);
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.php">
-                <img src="assets/logo.jpg" alt="Logo" width="40" height="40" class="me-2 rounded-circle">
+                <img src="assets/LOGO.jpg" alt="Logo" width="40" height="40" class="me-2 rounded-circle">
                 <span class="text-white">Toko Berkah Gadget</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto me-4">
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-mobile-alt me-2"></i>Samsung</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-tablet-alt me-2"></i>Tablets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-watch me-2"></i>Smartwatch</a></li>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-mobile-alt me-2"></i>Samsung</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-tablet-alt me-2"></i>Tablets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-watch me-2"></i>Smartwatch</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             <i class="fas fa-list me-2"></i>Kategori Lainnya
@@ -55,14 +61,18 @@ $result = mysqli_query($conn, $query);
                         </ul>
                     </li>
                 </ul>
-                <form class="d-flex search-form" action="" method="GET">
-                    <input class="form-control" type="search" name="search" placeholder="Cari produk..." value="<?php echo htmlspecialchars($search); ?>">
-                    <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                <form class="d-flex search-form me-2 position-relative" action="" method="GET">
+                    <input class="form-control rounded-pill ps-4 pe-5" type="search" name="search" placeholder="Cari produk..." value="<?php echo htmlspecialchars($search); ?>">
+                    <button class="btn position-absolute end-0 top-50 translate-middle-y me-2" type="submit">
+                        <i class="fas fa-search text-muted"></i>
+                    </button>
                 </form>
-                <a href="#" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">
-                    <i class="fas fa-sign-in-alt"></i> Login
+
+                <a href="login.php" class="btn btn-outline-light">
+                    <i class="fas fa-user-lock"></i> Login
                 </a>
             </div>
+        </div>
         </div>
     </nav>
 
